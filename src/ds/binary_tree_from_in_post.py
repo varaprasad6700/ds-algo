@@ -1,5 +1,5 @@
 """
-https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/submissions/
+https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
 """
 from typing import List, Optional
 

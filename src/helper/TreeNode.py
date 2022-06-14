@@ -31,4 +31,3 @@ class TreeNode:
     @staticmethod
     def get_pre_post_in_orders(root) -> List[List[int]]:
         return [TreeNode.pre_order(root), TreeNode.post_order(root), TreeNode.in_order(root)]
-

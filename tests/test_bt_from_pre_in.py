@@ -1,6 +1,5 @@
 import pytest
 
-from src.ds.binary_tree_from_in_post import build_tree_in_post
 from src.ds.binary_tree_from_pre_in_order import build_tree_pre_in
 from src.helper.TreeNode import TreeNode
 
@@ -13,4 +12,3 @@ def test_bt_from_pre_in(inorder, preorder, expected_pre, expected_post, expected
     assert temp[0] == expected_pre
     assert temp[1] == expected_post
     assert temp[2] == expected_in
-
