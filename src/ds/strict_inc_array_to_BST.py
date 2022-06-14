@@ -20,4 +20,4 @@ def sorted_array_to_bst(nums: List[int]) -> Optional[TreeNode]:
 
 if __name__ == '__main__':
     nums = [-10, -3, 0, 5, 9]
-    print(TreeNode.convert_tree_to_list(sorted_array_to_bst(nums)))
+    print(TreeNode.pre_order(sorted_array_to_bst(nums)))
