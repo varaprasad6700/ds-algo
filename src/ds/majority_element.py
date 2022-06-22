@@ -29,7 +29,26 @@ def majority_element_div_and_conquer(nums: List[int], l: int = 0, r: int = None)
     return left if lc > rc else right
 
 
+def majority_element_boyer_moore_voting(nums: List[int]) -> int:
+    candidate = -1
+    votes = 0
+    for i in nums:
+        if votes == 0:
+            candidate = i
+            votes += 1
+        elif i == candidate:
+            votes += 1
+        else:
+            votes -= 1
+    count = sum([1 for i in nums if i == candidate])
+    if count > len(nums) // 2:
+        return candidate
+    else:
+        return -1
+
+
 if __name__ == '__main__':
     nums = [2, 2, 1, 1, 1, 2, 2]
     print(majority_element_dict(nums))
     print(majority_element_div_and_conquer(nums, 0, len(nums) - 1))
+    print(majority_element_boyer_moore_voting(nums))
