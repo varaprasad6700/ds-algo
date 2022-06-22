@@ -30,6 +30,9 @@ def majority_element_div_and_conquer(nums: List[int], l: int = 0, r: int = None)
 
 
 def majority_element_boyer_moore_voting(nums: List[int]) -> int:
+    """
+    works only if an element is present more than n/2 times
+    """
     candidate = -1
     votes = 0
     for i in nums:
@@ -40,11 +43,7 @@ def majority_element_boyer_moore_voting(nums: List[int]) -> int:
             votes += 1
         else:
             votes -= 1
-    count = sum([1 for i in nums if i == candidate])
-    if count > len(nums) // 2:
-        return candidate
-    else:
-        return -1
+    return candidate
 
 
 if __name__ == '__main__':
