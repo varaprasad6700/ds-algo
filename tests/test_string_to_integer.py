@@ -1,5 +1,3 @@
-
-
 import pytest
 
 from src.ds.string_to_integer import string_to_integer

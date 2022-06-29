@@ -1,7 +1,6 @@
 import pytest
-from src.ds.triplets_in_ap_from_sorted_array import triplets_in_ap_from_sorted_array
 
-from src.ds.truncatable_primes_sum import truncatable_prime_sum
+from src.ds.triplets_in_ap_from_sorted_array import triplets_in_ap_from_sorted_array
 
 
 @pytest.mark.parametrize("numbers, expected", [

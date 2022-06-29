@@ -13,7 +13,7 @@ def roman_to_int(s: str) -> int:
         if ind >= len(s) - 1:
             out_ += vals[curr]
         else:
-            nex = s[ind+1]
+            nex = s[ind + 1]
             if order.index(nex) > order.index(curr):
                 out_ -= vals[curr]
             else:

@@ -2,8 +2,8 @@
 https://leetcode.com/problems/merge-two-sorted-lists/
 """
 
-
 from typing import Optional
+
 from src.helper.ListNode import ListNode
 
 
