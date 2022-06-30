@@ -24,7 +24,7 @@ def merge(arr, left, mid, right):
         k += 1
 
 
-def merge_sort(arr: List[int], left: int, right: int) -> None:
+def merge_sort(arr: List, left: int, right: int) -> None:
     if left < right:
         mid = (left + right) // 2
         merge_sort(arr, left, mid)

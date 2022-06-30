@@ -34,14 +34,10 @@ def merge(left: ListNode, right: ListNode):
             temp.next = right
             temp = temp.next
             right = right.next
-    while left is not None:
+    if left is not None:
         temp.next = left
-        temp = temp.next
-        left = left.next
-    while right is not None:
+    if right is not None:
         temp.next = right
-        temp = temp.next
-        right = right.next
     return head.next
 
 
