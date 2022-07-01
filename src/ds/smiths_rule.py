@@ -19,7 +19,6 @@ def smiths_rule(n: int, p: List[int], w: List[int]) -> List[int]:
     order = []
     ratios = [w[i] / p[i] for i in range(n)]
     original = ratios[:]
-    i = 0
     merge_sort(ratios, 0, n - 1)
     ratios.reverse()
     for i in range(n):
