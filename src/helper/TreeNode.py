@@ -24,6 +24,9 @@ class TreeNode:
     # in-order traversal
     @staticmethod
     def in_order(root) -> List[int]:
+        """
+        https://leetcode.com/problems/binary-tree-inorder-traversal/
+        """
         if root is None:
             return []
         return TreeNode.in_order(root.left) + [root.val] + TreeNode.in_order(root.right)
