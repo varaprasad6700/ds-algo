@@ -32,5 +32,18 @@ class TreeNode:
         return TreeNode.in_order(root.left) + [root.val] + TreeNode.in_order(root.right)
 
     @staticmethod
+    def in_order_with_stack(root) -> List[int]:
+        stack = []
+        out = []
+        while root is not None or len(stack) != 0:
+            while root is not None:
+                stack.append(root)
+                root = root.left
+            root = stack.pop()
+            out.append(root.val)
+            root = root.right
+        return out
+
+    @staticmethod
     def get_pre_post_in_orders(root) -> List[List[int]]:
         return [TreeNode.pre_order(root), TreeNode.post_order(root), TreeNode.in_order(root)]
