@@ -10,6 +10,9 @@ class TreeNode:
     # pre-order traversal
     @staticmethod
     def pre_order(root) -> List[int]:
+        """
+        https://leetcode.com/problems/binary-tree-preorder-traversal/
+        """
         if root is None:
             return []
         return [root.val] + TreeNode.pre_order(root.left) + TreeNode.pre_order(root.right)
@@ -17,6 +20,9 @@ class TreeNode:
     # post-order traversal
     @staticmethod
     def post_order(root) -> List[int]:
+        """
+        https://leetcode.com/problems/binary-tree-postorder-traversal/
+        """
         if root is None:
             return []
         return TreeNode.post_order(root.left) + TreeNode.post_order(root.right) + [root.val]
