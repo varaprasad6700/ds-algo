@@ -84,7 +84,7 @@ def exponential_search(nums: [int], target: int) -> int:
     if nums[0] == target:
         return 0
     i = 1
-    while i < len(nums) and nums[i] <= x:
+    while i < len(nums) and nums[i] <= target:
         i *= 2
     return binary_search_sorted(nums[i // 2: min(i, len(nums) - 1) + 1], target)
 
