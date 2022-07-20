@@ -1,6 +1,6 @@
 import pytest
 
-from src.ds.house_robber import rob
+from src.ds.house_robber import rob, rob_optim
 
 
 @pytest.mark.parametrize("inp, expected", [
@@ -10,3 +10,4 @@ from src.ds.house_robber import rob
 ])
 def test_rob(inp, expected):
     assert rob(inp) == expected
+    assert rob_optim(inp) == expected
