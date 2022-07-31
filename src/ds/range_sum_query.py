@@ -1,5 +1,6 @@
 """
 https://leetcode.com/problems/range-sum-query-mutable/
+from the solution
 """
 from typing import List
 
