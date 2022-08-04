@@ -16,10 +16,11 @@ Input: s = "paper", t = "title"
 Output: true
 """
 import string
+from collections import defaultdict
 from typing import Optional, List
 
 
-def check_isomorphic(s: str, t: str) -> bool:
+def check_isomorphic_onlyalpha(s: str, t: str) -> bool:
     if len(s) != len(t):
         return False
     if len(s) == 1:
@@ -36,6 +37,18 @@ def check_isomorphic(s: str, t: str) -> bool:
             map_arr[ind1] = ind2
             used[ind2] = 1
         elif map_arr[ind1] != ind2:
+            return False
+    return True
+
+
+def check_isomorphic(s: str, t: str) -> bool:
+    dict_s = defaultdict(str)
+    dict_t = defaultdict(str)
+    for i in range(len(s)):
+        if s[i] not in dict_s and t[i] not in dict_t:
+            dict_s[s[i]] = t[i]
+            dict_t[t[i]] = s[i]
+        elif dict_s[s[i]] != t[i] or dict_t[t[i]] != s[i]:
             return False
     return True
 

@@ -1,6 +1,6 @@
 import pytest
 
-from src.ds.check_isomorphic import check_isomorphic
+from src.ds.check_isomorphic import check_isomorphic_onlyalpha, check_isomorphic
 
 
 @pytest.mark.parametrize("s, t, expected", [
@@ -10,4 +10,5 @@ from src.ds.check_isomorphic import check_isomorphic
     ("egs", "add", False)
 ])
 def test_check_isomorphic(s, t, expected):
+    assert check_isomorphic_onlyalpha(s, t) == expected
     assert check_isomorphic(s, t) == expected
