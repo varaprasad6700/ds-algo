@@ -21,16 +21,10 @@ def merge_two_lists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Opt
             curr.next = temp
             curr = temp
             list2 = list2.next
-    while list1 is not None:
-        temp = ListNode(list1.val)
-        curr.next = temp
-        curr = temp
-        list1 = list1.next
-    while list2 is not None:
-        temp = ListNode(list2.val)
-        curr.next = temp
-        curr = temp
-        list2 = list2.next
+    if list1 is not None:
+        curr.next = list1
+    if list2 is not None:
+        curr.next = list2
     return head.next
 
 
