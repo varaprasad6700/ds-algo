@@ -4,7 +4,7 @@ https://projecteuler.net/problem=36
 
 
 def get_palindrome(n: int, odd: bool) -> int:
-    if (odd):
+    if odd:
         return int(str(n) + str(n)[-2::-1])
     else:
         return int(str(n) + str(n)[::-1])
