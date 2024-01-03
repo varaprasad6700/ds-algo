@@ -18,4 +18,4 @@ def number_of_beams(bank: List[int]) -> int:
 
 
 if __name__ == '__main__':
-    print(max_profit(["011001", "000000", "010100", "001000"]))
+    print(number_of_beams(["011001", "000000", "010100", "001000"]))
